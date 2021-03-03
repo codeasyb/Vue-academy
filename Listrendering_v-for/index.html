@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>List Rendering with v-for</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="app">
+        <!--
+            <h1>User List</h1>
+            <ul>    
+                <li v-for="user in users">{{ user }}</li>
+            </ul><hr>
+            <p>1-10</p>
+            <p v-for="number in 10">{{number}}</p>   
+        -->
+            <h1>Users list</h1>
+            <div class="card" v-for="user in users" :key="user.id">
+                <div class="card-body">
+                    <p><strong>Name: </strong>{{ user.name }}</p>
+                    <p><strong>profession: </strong>{{ user.profession }}</p>
+                </div>  
+            </div>
+        </div>
+        
+        <script src="" async defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Components and Props</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <!--
+            Components allow us to divide our apps into reusable blocks of code, and within
+            the compoents we can write the Javascript logic and the HTML code
+            Parent
+                child
+            [Components] allow us to keep our code ordered and maintainable,
+            thus give us the chance to create large scale projects easily
+
+            [Props], a special type of attribute that is used to pass data between parent and child
+            componets. When a value is passed from one component to another via Prop, it becomes a 
+            property of the component instance to which it has been passed.
+        -->
+        <div id="app"><!--ROOT-->
+            <comment
+                v-for="(comment, index) in comments"
+                :comment="comment"
+                :key="index">
+            </comment>
+        </div>
+        
+        <script src="" async defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

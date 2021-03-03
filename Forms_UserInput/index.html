@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Forms and User Input</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="app">
+            <!-- Basic property examples 
+            <div class="row justify-content-center mt-3">
+                <div class="col-5">
+                    <p>Write a message</p>
+                    <textarea class="form-control"
+                            v-model="text"
+                            placeholder="write something"
+                            cols="60"
+                            rows="5">
+                    </textarea>
+                </div>
+                <div class="col-5">
+                    <p>Message</p>
+                    <p>{{ text }}</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-3">
+                <input type="checkbox" id="checkbox" v-model="checked">
+                <label for="checkbox">&nbsp;Value: {{ checked }}</label>
+            </div>
+
+             <div class="row justify-content-center mt-3">
+                <select v-model="city">
+                    <option>New Jersey</option>
+                    <option>New York</option>
+                    <option>London</option>
+                    <option>Dubai</option>
+                    <option>Russia</option>
+                </select>
+                <span>&nbsp;City: {{ city }}</span>
+            </div>
+            -->
+            <p v-if="errors" class="mt-2" style="text-align: center">{{ errors }}</p>
+            
+            <div class="row justify-content-center mt-3">
+                <div class="col-10">
+                    <form @submit.prevent="onSubmit">
+                        <div class="form-group">
+                            <label for="commentText">Publish a comment</label>
+                            <textarea class="form-control"
+                                    v-model="comment"
+                                    id="commentText"
+                                    cols="80"
+                                    rows="5">
+                            </textarea>
+                        </div>
+                        <button class="btn btn-sm btn-primary"
+                                type="submit">
+                                Publish
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+           <div class="row justify-content-center mt-3">
+                <div class="col-10">
+                    <div class="card mt-1" v-for="comment in comments">
+                        <div class="card-body">
+                            {{ comment }}
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="" async defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
